@@ -1,0 +1,62 @@
+.c-form {
+	&__group {
+		margin-bottom: 2rem;
+	}
+
+	&__control {
+		display: block;
+		padding: 0.6rem;
+		width: 100%;
+        border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+	    background-clip: padding-box;
+
+		&:focus {
+		    outline: 0;
+		    box-shadow: 0 0 0 0.2rem rgba(107, 182, 255, 0.25);
+		}
+
+		&::placeholder {
+			color: #b5b5b5;
+			opacity: 1;
+		}
+	}
+
+	&__control--dark {
+		background: #f8f8f8;
+	}
+
+	&__label {
+		font-weight: 500;
+	}
+
+	&__label--centered {
+		align-self: center;
+	}
+
+	/* CHECKBOX INPUT */
+	&__checkbox {
+		display: flex;
+		align-items: center;
+	}
+
+	&__checkbox-input {
+		margin-right: 0.5rem;
+
+		&:focus {
+		    outline: 0;
+		    box-shadow: 0 0 0 0.2rem rgba(107, 182, 255, 0.25);
+		}
+	}
+
+	&__checkbox-label {
+		margin: 0;
+		font-size: 1.4rem;
+	}
+
+	/* HELPER TEXT */
+	&__text {
+		display: block;
+		margin-top: 10px;
+	}
+}

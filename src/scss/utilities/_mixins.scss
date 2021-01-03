@@ -1,0 +1,87 @@
+@mixin on-event {
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+}
+
+/* BUTTON MIXIN */
+@mixin button-color($bg, $txt: #FFF) {
+    color: $txt;
+    background-color: $bg;
+    border-color: $bg;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $txt;
+        background-color: darken($bg, 5%);
+        border-color: darken($bg, 5%);
+    }
+}
+
+/* RESPONSIVE MIXINS */
+// Small devices
+@mixin sm-min {
+   @media (min-width: #{$screen-sm}) {
+       @content;
+   }
+}
+
+@mixin sm-max {
+   @media (max-width: #{$screen-sm}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md-min {
+   @media (min-width: #{$screen-md}) {
+       @content;
+   }
+}
+
+@mixin md-max {
+   @media (max-width: #{$screen-md}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg-min {
+   @media (min-width: #{$screen-lg}) {
+       @content;
+   }
+}
+
+@mixin lg-max {
+   @media (max-width: #{$screen-lg}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl-min {
+   @media (min-width: #{$screen-xl}) {
+       @content;
+   }
+}
+
+@mixin xl-max {
+   @media (max-width: #{$screen-xl}) {
+       @content;
+   }
+}
+
+// Custom devices
+@mixin rwd-min($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}
+
+@mixin rwd-max($screen) {
+   @media (max-width: $screen+'px') {
+       @content;
+   }
+}

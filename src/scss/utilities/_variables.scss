@@ -1,0 +1,34 @@
+/* FONTS */
+$open-sans-font: 'Open Sans', sans-serif;
+$poppins-font: 'Poppins', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$montserrat-font: 'Montserrat', sans-serif;
+
+/* COLORS */
+$blue-ribbon: #106EEA;
+$white: #FFFFFF;
+$mine-shaft: #222222;
+$emperor: #555555;
+$cod-gray: #111111;
+$tundora: #444444;
+$selago: #F6F9FE;
+$hawkes-blue: #E7F1FD;
+$deep-sapphire: #062B5B;
+$silver: #CCCCCC;
+$silver-chalice: #AAAAAA;
+$alabaster: #F8F8F8;
+$boulder: #777777;
+$ghost: #CED4DA;
+
+$navbar-link-color: $blue-ribbon;
+
+/* MISC */
+$topbar-height: 40px;
+$navbar-height: 82px;
+$navbar-height-mobile: 52px;
+
+/* RESPONSIVE BREAKPOINTS */
+$screen-sm: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md: 768px; // Small tablets (portrait view)
+$screen-lg: 992px; // Tablets and small desktops
+$screen-xl: 1200px; // Large tablets and desktops

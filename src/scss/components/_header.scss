@@ -1,0 +1,51 @@
+.c-header {
+	background: $white;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+	z-index: 101;
+	transition: all .4s;
+
+	@include lg-min {
+		top: 40px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 58px;
+
+		@include lg-min {
+			height: 93px;
+		}
+	}
+
+	&__logo {
+		margin-right: 3rem;
+		width: 115px;
+
+		@include lg-min {
+			width: 160px;
+		}
+	}
+
+	&__nav-toggler {
+		display: flex;
+		border: none;
+		background: none;
+		outline: none !important;
+
+		@include lg-min {
+			display: none;
+		}
+	}
+
+	&__nav-toggler-icon {
+		font-size: 2rem;
+		color: #000;
+	}
+
+	&--is-scrolled {
+		top: 0;
+		//height: 63px;
+	}
+}

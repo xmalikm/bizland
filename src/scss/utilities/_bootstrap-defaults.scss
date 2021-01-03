@@ -1,0 +1,31 @@
+//////////////////////////////
+///// BOOTSTRAP OVERRIDES ////
+//////////////////////////////
+
+/* BASE FONT */
+$font-family-base: $open-sans-font;
+$font-size-base: 1.6rem;
+
+/* HEADINGS */
+$headings-font-family: $roboto-font;
+
+/* BODY */
+//$body-color: $tundora;
+
+/* COLOR THEMES */
+//$primary: $blue-ribbon;
+
+/* SPACER */
+$spacer: 1.6rem;
+$spacer-custom: 0.1rem; // 0.1rem = 1px
+
+$spacers: (
+	0: 0
+);
+@for $i from 1 through 200 {
+	@if (($i <= 10) or (($i % 5) == 0)) {
+		$spacers: map-merge($spacers, (
+			$i: ($i * $spacer-custom)
+		));
+	}
+}

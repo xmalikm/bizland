@@ -1,0 +1,26 @@
+.c-btn {
+	display: inline-block;
+	padding: 0.5rem 0.8rem;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 400;
+	color: #000;
+	border-radius: 0.25rem;
+	transition: all 0.15s ease-in-out;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.c-btn--primary {
+	color: #FFF;
+	background-color: #00a54f;
+	border-color: #00a54f;
+
+	&:hover {
+		color: #FFF;
+		background-color: darken(#00a54f,5);
+		border-color: darken(#00a54f,5);
+	}
+}

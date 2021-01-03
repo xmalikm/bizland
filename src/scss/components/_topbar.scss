@@ -1,0 +1,37 @@
+.c-topbar {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: 1.3rem;
+	color: $white;
+	background-color: $blue-ribbon;
+	transition: all .4s;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__contact-item {
+		color: $white;
+		transition: all .4s;
+
+		&:not(:last-child) {
+			margin-right: 1.8rem;
+		}
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&__contact-icon {
+		margin-right: 0.6rem;
+	}
+
+	/* c-topbar--is-scrolled */
+	&--is-scrolled {
+		top: -40px;
+	}
+}

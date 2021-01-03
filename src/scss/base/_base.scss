@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100%;
+
+    @include lg-min {
+        //padding-top: $topbar-height + $navbar-height;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
