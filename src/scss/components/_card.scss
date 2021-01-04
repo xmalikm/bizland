@@ -44,11 +44,12 @@
 		&::before {
 		    content: '';
 		    position: absolute;
-		    top: 100%;
+		    top: 0;
 		    bottom: 0;
 		    left: 0;
 		    right: 0;
 		    z-index: -1;
+			opacity: 0;
 		    background: $white;
 			border-radius: 8px;
 		    transition: all 0.4s;
@@ -56,7 +57,7 @@
 
 		&:hover {
 			&::before {
-			    top: 0;
+			    opacity: 1;
 		        background: $blue-ribbon;
 			}
 
