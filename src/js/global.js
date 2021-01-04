@@ -34,20 +34,22 @@
 		}
 	});
 
+	// run only on descktop screen sizes
+	if ($(window).width() > 992) {
+		// toggle "--is-scrolled" state class to header and topbar when page is scrolled
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('.js-header').addClass('c-header--is-scrolled');
+				$('.js-topbar').addClass('c-topbar--is-scrolled');
+			} else {
+				$('.js-header').removeClass('c-header--is-scrolled');
+				$('.js-topbar').removeClass('c-topbar--is-scrolled');
+			}
+		});
 
-	// toggle "--is-scrolled" state class to header and topbar when page is scrolled
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
+		if ($(window).scrollTop() > 100) {
 			$('.js-header').addClass('c-header--is-scrolled');
 			$('.js-topbar').addClass('c-topbar--is-scrolled');
-		} else {
-			$('.js-header').removeClass('c-header--is-scrolled');
-			$('.js-topbar').removeClass('c-topbar--is-scrolled');
 		}
-	});
-
-	if ($(window).scrollTop() > 100) {
-		$('.js-header').addClass('c-header--is-scrolled');
-		$('.js-topbar').addClass('c-topbar--is-scrolled');
 	}
 })(jQuery);

@@ -13,6 +13,7 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 58px;
+		transition: all .4s;
 
 		@include lg-min {
 			height: 93px;
@@ -22,6 +23,7 @@
 	&__logo {
 		margin-right: 3rem;
 		width: 115px;
+		transition: all .4s;
 
 		@include lg-min {
 			width: 160px;
@@ -44,8 +46,16 @@
 		color: #000;
 	}
 
+	/* .c-header--is-scrolled */
 	&--is-scrolled {
 		top: 0;
-		//height: 63px;
+		.c-header {
+			&__wrapper {
+				height: 73px;
+			}
+			&__logo {
+				width: 140px;
+			}
+		}
 	}
 }
