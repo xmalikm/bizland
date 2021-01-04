@@ -1,0 +1,12 @@
+.c-section {
+	padding: 3rem 0;
+
+	@include lg-min {
+		padding: 6rem 0;
+	}
+
+	/* .c-section--bg-dark */
+	&--bg-dark {
+		background: $selago;
+	}
+}
