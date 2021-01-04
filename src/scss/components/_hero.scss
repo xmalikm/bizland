@@ -1,0 +1,58 @@
+.c-hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 5.8rem; // compensation of fixed header
+	width: 100%;
+	height: 100vh;
+	background: url('../../images/hero_background.png');
+	background-size: cover;
+
+	@include lg-min {
+		height: 75vh;
+		padding-top: 13.3rem;
+	}
+
+	&__title {
+		font-family: $poppins-font;
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 3.6rem;
+		color: $mine-shaft;
+
+		@include lg-min {
+			font-size: 4.8rem;
+			line-height: 5.6rem;
+		}
+
+		&--highlighted {
+			color: $blue-ribbon;
+		}
+	}
+
+	&__text {
+		margin: 0.5rem 0 3rem;
+		font-size: 1.8rem;
+		font-weight: 400;
+		line-height: 2.4rem;
+		color: $emperor;
+
+		@include lg-min {
+			font-size: 2.4rem;
+			max-width: 800px;
+		}
+	}
+
+	/* .c-hero--has-overlay */
+	&--has-overlay {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(255,255,255,0.6);
+		}
+	}
+}
