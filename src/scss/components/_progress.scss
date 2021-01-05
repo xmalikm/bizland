@@ -1,0 +1,30 @@
+.c-progress {
+	margin-bottom: 2rem;
+
+	&__wrapper {
+		display: flex;
+		height: 1.2rem;
+		overflow: hidden;
+		line-height: 0;
+		background: $hawkes-blue;
+		border-radius: 0.25rem;
+	}
+
+	&__bar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		text-align: center;
+		color: $white;
+		background: $blue-ribbon;
+	}
+
+	&__label {
+		padding: 0.1rem;
+		font-family: $poppins-font;
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $mine-shaft;
+	}
+}

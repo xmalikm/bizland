@@ -52,4 +52,13 @@
 			$('.js-topbar').addClass('c-topbar--is-scrolled');
 		}
 	}
+
+	// skills section
+	$('.js-skills').waypoint(function() {
+		$('.js-progress-bar').each(function() {
+			$(this).animate({"width": $(this).data("value") + '%'}, 900);
+	    });
+	}, {
+		offset: '70%'
+	});
 })(jQuery);
