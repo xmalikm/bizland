@@ -23,9 +23,8 @@
 			color: $white;
 		}
 
-		&--bg-dark {
+		&--bg-dark-blue {
 			background: $blue-ribbon;
-			border-radius: 50%;
 		}
 
 		&--border-light {
@@ -78,18 +77,22 @@
 		box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
 	}
 
+	/* .c-card--centered */
 	&--centered {
 		text-align: center;
 	}
 
+	/* .c-card--rounded */
 	&--rounded {
 		border-radius: 8px;
 	}
 
-	&--bg-dark {
+	/* .c-card--bg-dark-blue */
+	&--bg-light-blue {
 		background: $hawkes-blue;
 	}
 
+	/* .c-card--hover-bottom */
 	&--hover-bottom {
 		&::before {
 		    content: '';
