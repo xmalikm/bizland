@@ -61,4 +61,10 @@
 	}, {
 		offset: '70%'
 	});
+
+	// counterUp
+	$('.js-counter-up').counterUp({
+		delay: 10,
+		time: 1000
+	});
 })(jQuery);
