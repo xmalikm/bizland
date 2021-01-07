@@ -44,6 +44,11 @@
 				scrollto = 0;
 			}
 
+			// automatically close mobile menu after click on item
+			if ($(this).hasClass('js-navbar-link') && window.matchMedia("(max-width: 991px)").matches) {
+				$('.js-page').removeClass('c-page--has-overlay');
+			}
+
 			$('html, body').animate({
 				scrollTop: scrollto
 			}, 900, function() {
@@ -91,7 +96,7 @@
 		let navbarToggler = $('.js-nav-toggler');
 
 		if (page.hasClass('c-page--has-overlay') && !navbar.is(e.target) && navbar.has(e.target).length === 0 && !navbarToggler.is(e.target) && navbarToggler.has(e.target).length === 0) {
-			$('.js-page').toggleClass('c-page--has-overlay');
+			page.toggleClass('c-page--has-overlay');
 		}
 	});
 
