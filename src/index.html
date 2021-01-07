@@ -13,8 +13,7 @@
 		<div class="c-topbar__wrapper">
 			<div class="c-topbar__contacts">
 				<i class="c-topbar__contact-icon fas fa-envelope"></i><a class="c-topbar__contact-item" href="mailto:contact@example.com">contact@example.com</a>
-				<i class="c-topbar__contact-icon fas fa-phone"></i><a class="c-topbar__contact-item" href="tel:+155895548855">+1
-				5589 55488 55</a>
+				<i class="c-topbar__contact-icon fas fa-phone"></i><a class="c-topbar__contact-item" href="tel:+155895548855">+1 5589 55488 55</a>
 			</div>
 			
 			<div class="c-social-links c-social-links--rotate">
@@ -28,33 +27,33 @@
 	</div>
 </div>
 
-<header class="c-header fixed-top js-header">
+<header id="header" class="c-header fixed-top js-header">
 	<div class="container">
 		<div class="c-header__wrapper">
 			<a href="#">
 				<img src="./images/logo.png" class="c-header__logo" alt="Bizland">
 			</a>
 			
-			<nav class="c-navbar">
+			<nav class="c-navbar js-navbar">
 				<div class="c-navbar__collapse js-navbar-collapse">
 					<ul class="c-navbar__list">
 						<li class="c-navbar__item c-navbar__item--active">
-							<a href="" class="c-navbar__link">Home</a>
+							<a href="#header" class="c-navbar__link js-navbar-link">Home</a>
 						</li>
 						<li class="c-navbar__item">
-							<a href="" class="c-navbar__link">About</a>
+							<a href="#about" class="c-navbar__link js-navbar-link">About</a>
 						</li>
 						<li class="c-navbar__item">
-							<a href="" class="c-navbar__link">Services</a>
+							<a href="#services" class="c-navbar__link js-navbar-link">Services</a>
 						</li>
 						<li class="c-navbar__item">
-							<a href="" class="c-navbar__link">Portfolio</a>
+							<a href="#portfolio" class="c-navbar__link js-navbar-link">Portfolio</a>
 						</li>
 						<li class="c-navbar__item">
-							<a href="" class="c-navbar__link">Team</a>
+							<a href="#team" class="c-navbar__link js-navbar-link">Team</a>
 						</li>
 						<li class="c-navbar__item">
-							<a href="" class="c-navbar__link">Contact</a>
+							<a href="#contact" class="c-navbar__link js-navbar-link">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -73,7 +72,7 @@
 		<h2 class="c-hero__text">Try marinating the teriyaki white breads with yellow champaign and oysters juice,
 			refrigerated.</h2>
 		<div class="">
-			<a href="" class="c-btn c-btn--primary c-btn--bold mr-15">GET STARTED</a>
+			<a href="#about" class="c-btn c-btn--primary c-btn--bold mr-15 js-scrollto">GET STARTED</a>
 			<a href="" class="c-btn c-btn--youtube"><i class="c-btn__icon far fa-play-circle"></i> Watch Video</a>
 		</div>
 	</div>
@@ -136,6 +135,7 @@
 	</div>
 </section>
 
+<!-- ABOUT US -->
 <section id="about" class="c-section c-section--bg-dark">
 	<div class="container" data-aos="fade-up">
 		<div class="c-section__info-wrapper">
@@ -183,6 +183,7 @@
 	</div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="c-section js-skills">
 	<div class="container" data-aos="fade-up">
 		<div class="row">
@@ -249,6 +250,7 @@
 	</div>
 </section>
 
+<!-- STATISTICS -->
 <section id="numbers" class="c-section">
 	<div class="container" data-aos="fade-up">
 		<div class="row">
@@ -300,6 +302,7 @@
 	</div>
 </section>
 
+<!-- BRANDS -->
 <section id="brands" class="c-section c-section--bg-dark">
 	<div class="container" data-aos="zoom-in">
 		<div class="row c-list c-list--brands">
@@ -313,7 +316,8 @@
 	</div>
 </section>
 
-<section class="c-section">
+<!-- SERVICES -->
+<section id="services" class="c-section">
 	<div class="container" data-aos="fade-up">
 		<div class="c-section__info-wrapper">
 			<span class="c-section__label">Services</span>
@@ -391,7 +395,6 @@
 			
 		</div>
 	</div>
-	
 </section>
 
 <div class="c-page__overlay"></div>

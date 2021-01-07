@@ -1,13 +1,6 @@
 !(function ($) {
 	"use strict";
 
-	$(window).on('load', function () {
-		AOS.init({
-			duration: 1000,
-			once: true
-		});
-	});
-
 	// page preloader
 	$(window).on('load', function() {
 		let preloader = $('.js-preloader');
@@ -16,6 +9,74 @@
 				$(this).remove();
 			});
 		}
+	});
+
+	// init AOS library
+	$(window).on('load', function () {
+		AOS.init({
+			duration: 1000,
+			once: true
+		});
+	});
+
+	// init elements that use counterUp library
+	$('.js-counter-up').counterUp({
+		delay: 10,
+		time: 1000
+	});
+
+	// determine the offset
+	let scrolltoOffset = $('.js-header').outerHeight() - 21;
+	if (window.matchMedia("(max-width: 991px)").matches) {
+		scrolltoOffset += 20;
+	}
+
+	// smooth scroll for the navigation menu and links with .js-scrollto classes
+	$(document).on('click', '.js-navbar-link, .js-scrollto', function(e) {
+		let hash = this.hash;
+		let target = $(hash); // target element
+
+		if (target.length) {
+			e.preventDefault();
+			let scrollto = target.offset().top - scrolltoOffset;
+
+			if ($(this).attr('href') === '#header') {
+				scrollto = 0;
+			}
+
+			$('html, body').animate({
+				scrollTop: scrollto
+			}, 900, function() {
+				if (history.pushState) {
+					history.pushState(null, null, hash);
+				} else {
+					location.hash = hash;
+				}
+			});
+		}
+	});
+
+	// Navigation active state on scroll
+	let contentSections = $('section');
+	let mainNav = $('.js-navbar');
+
+	$(window).on('scroll', function () {
+		let curPos = $(this).scrollTop() + 200;
+
+		contentSections.each(function () {
+			let top = $(this).offset().top,
+				bottom = top + $(this).outerHeight();
+
+			if (curPos >= top && curPos <= bottom) {
+				if (curPos <= bottom) {
+					mainNav.find('li').removeClass('c-navbar__item--active');
+				}
+				mainNav.find('.js-navbar-link[href="#' + $(this).attr('id') + '"]').parent('li').addClass('c-navbar__item--active');
+			}
+			if (curPos < 300) {
+				$(".js-navbar ul:first li:first").addClass('c-navbar__item--active');
+			}
+		});
 	});
 
 	// mobile menu handler
@@ -60,11 +121,5 @@
 	    });
 	}, {
 		offset: '70%'
-	});
-
-	// counterUp
-	$('.js-counter-up').counterUp({
-		delay: 10,
-		time: 1000
 	});
 })(jQuery);
