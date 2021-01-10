@@ -1,0 +1,51 @@
+.c-portfolio {
+	&__nav {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+
+	&__nav-item {
+		padding: 1rem 1.5rem;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $tundora;
+		cursor: pointer;
+		transition: all 0.3s;
+		
+		&:hover {
+			color: $blue-ribbon;
+		}
+
+		&--active {
+			color: $blue-ribbon;
+		}
+	}
+
+	&__item {
+		margin-bottom: 3rem;
+	}
+
+	&__item-inner {
+		position: relative;
+		cursor: pointer;
+
+		&:hover:before {
+			opacity: 1;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			opacity: 0;
+			background: rgba(0, 0, 0, 0.5);
+			transition: all 0.3s;
+		}
+	}
+}

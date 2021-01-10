@@ -38,6 +38,22 @@
 		slidesToShow: 1,
 	});
 
+	// init isotope layout library
+	$(window).on('load', function() {
+		let portfolioIsotope = $('.js-portfolio-container').isotope({
+			itemSelector: '.js-portfolio-item'
+		});
+
+		$('.js-portfolio-nav-item').on('click', function () {
+			$(".js-portfolio-nav-item").removeClass('c-portfolio__nav-item--active');
+			$(this).addClass('c-portfolio__nav-item--active');
+
+			portfolioIsotope.isotope({
+				filter: $(this).data('filter')
+			});
+		});
+	});
+
 	// determine the offset
 	let scrolltoOffset = $('.js-header').outerHeight() - 21;
 	if (window.matchMedia("(max-width: 991px)").matches) {

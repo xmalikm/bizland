@@ -28,11 +28,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.2",
     "counterup": "^1.0.2",
     "gsap": "^3.5.1",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "slick-carousel": "^1.8.1",

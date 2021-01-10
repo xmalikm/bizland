@@ -34,8 +34,12 @@
 // Font Awesome
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+// slick carousel
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+// fancybox
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 /*
  * BASIC STUFF
@@ -62,5 +66,6 @@
 @import "components/progress";
 @import "components/carousel";
 @import "components/testimonials";
+@import "components/portfolio";
 
 // PAGES
