@@ -73,39 +73,6 @@ module.exports = {
 							context: 'src/images',
 							outputPath: 'images/',
 						}
-					},
-					{
-						loader: 'image-webpack-loader',
-						options: {
-							mozjpeg: {
-								quality: 65
-							},
-							pngquant: {
-								quality: [0.65, 0.9],
-								speed: 4
-							},
-							svgo: {
-								plugins: [
-									{
-										removeViewBox: false
-									},
-									{
-										removeEmptyAttrs: false
-									}
-								]
-							},
-							gifsicle: {
-								optimizationLevel: 7,
-								interlaced: false
-							},
-							optipng: {
-								optimizationLevel: 7,
-								interlaced: false
-							},
-							webp: {
-								quality: 75
-							}
-						},
 					}
 				]
 			},
