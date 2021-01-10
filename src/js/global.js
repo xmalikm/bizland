@@ -19,10 +19,23 @@
 		});
 	});
 
-	// init elements that use counterUp library
+	// init counterUp library
 	$('.js-counter-up').counterUp({
 		delay: 10,
 		time: 1000
+	});
+
+	// init slick carousel
+	$('.js-carousel').slick({
+		autoplay: true,
+		autoplaySpeed: 6000,
+		dots: true,
+		dotsClass: 'c-carousel__dots',
+		customPaging: function(slider, i) {
+			return '';
+		},
+		arrows: false,
+		slidesToShow: 1,
 	});
 
 	// determine the offset

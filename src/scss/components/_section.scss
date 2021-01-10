@@ -60,4 +60,12 @@
 	&--bg-dark {
 		background: $selago;
 	}
+
+	/* .c-section--testimonials */
+	&--testimonials {
+		position: relative;
+		padding: 8rem 0;
+		background: url('../../images/testimonials_bg.png') center center;
+		background-size: cover;
+	}
 }

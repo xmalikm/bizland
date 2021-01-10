@@ -1,0 +1,68 @@
+.c-testimonials {
+	text-align: center;
+
+	&__item {
+		//
+	}
+
+	&__avatar {
+		margin: 0 auto;
+		width: 90px;
+		height: 90px;
+		border: 6px solid rgba(255, 255, 255, 0.15);
+		border-radius: 50%;
+
+		@include lg-min {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	&__name {
+		margin: 1rem 0 0;
+		font-size: 1.8rem;
+		font-weight: 600;
+		color: $white;
+
+		@include lg-min {
+			font-size: 2rem;
+		}
+	}
+
+	&__position {
+		margin: 0 0 1.5rem;
+		font-family: $montserrat-font;
+		font-size: 1.3rem;
+		color: #ddd;
+	}
+
+	&__text {
+		position: relative;
+	    margin: 0 auto 15px;
+		padding: 0 1.5rem;
+		max-width: 31rem;
+		font-size: 1.6rem;
+		font-style: italic;
+		color: #eee;
+
+		@include md-min {
+			max-width: 60rem;
+		}
+	}
+
+	&__quote {
+		position: absolute;
+		font-size: 2.6rem;
+		color: rgba(255, 255, 255, 0.4);
+
+		&--left {
+			top: -1.3rem;
+			left: -1.5rem;
+		}
+
+		&--right {
+			bottom: -1.2rem;
+			right: -1.4rem;
+		}
+	}
+}
