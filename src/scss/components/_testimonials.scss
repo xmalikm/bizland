@@ -40,7 +40,7 @@
 		position: relative;
 	    margin: 0 auto 15px;
 		padding: 0 1.5rem;
-		max-width: 31rem;
+		max-width: 28rem;
 		font-size: 1.6rem;
 		font-style: italic;
 		color: #eee;
@@ -57,12 +57,20 @@
 
 		&--left {
 			top: -1.3rem;
-			left: -1.5rem;
+			left: -0.4rem;
+
+			@include md-min {
+				left: -1.5rem;
+			}
 		}
 
 		&--right {
 			bottom: -1.2rem;
-			right: -1.4rem;
+			right: -0.5rem;
+
+			@include md-min {
+				right: -1.4;
+			}
 		}
 	}
 }
