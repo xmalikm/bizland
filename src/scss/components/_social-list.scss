@@ -1,4 +1,4 @@
-.c-social-links {
+.c-social-list {
 	$self: &;
 
 	&__item {
@@ -17,9 +17,9 @@
 	}
 
 	/* MODIFIERS */
-	/* .c-social-links--rotate */
+	/* .c-social-list--rotate */
 	&--rotate {
-		.c-social-links {
+		.c-social-list {
 			&__item {
 				&:hover {
 					#{$self}__icon {
@@ -30,9 +30,9 @@
 		}
 	}
 
-	/* .c-social-links--with-background */
+	/* .c-social-list--with-background */
 	&--with-background {
-		.c-social-links {
+		.c-social-list {
 			&__item {
 				display: inline-flex;
 				align-items: center;
@@ -44,9 +44,9 @@
 		}
 	}
 
-	/* .c-social-links--rounded */
+	/* .c-social-list--rounded */
 	&--rounded {
-		.c-social-links {
+		.c-social-list {
 			&__item {
 				border-radius: .3rem;
 			}
