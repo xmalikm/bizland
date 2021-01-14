@@ -3,6 +3,7 @@
 	position: relative;
 	margin-bottom: 3rem;
 	border-radius: 8px;
+	overflow: hidden;
 	transition: all 0.4s;
 
 	@include lg-min {
@@ -48,6 +49,10 @@
 		@include lg-min {
 			font-size: 1.4rem;
 		}
+	}
+
+	&__footer {
+		//
 	}
 
 	/* .c-card--services */
@@ -142,6 +147,7 @@
 	&--numbers {
 		margin-bottom: 5rem;
 		text-align: center;
+		overflow: visible;
 		background: $hawkes-blue;
 		border-radius: 0;
 
@@ -176,7 +182,6 @@
 	/* .c-card--team-member */
 	&--team-member {
 		border-radius: 4px;
-		overflow: hidden;
 		background: $white;
 		box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
 
@@ -230,6 +235,73 @@
 				&:hover {
 					background: #3b8af2;
 				}
+			}
+		}
+	}
+
+	/* .c-card--pricing */
+	&--pricing {
+		text-align: center;
+		background: $white;
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+		border-radius: 5px;
+
+		.c-card {
+			&__header, &__footer {
+				padding: 2rem 1.5rem;
+				background: $alabaster;
+			}
+
+			&__header {
+				font-family: $roboto-font;
+				font-weight: 700;
+				color: $boulder;
+
+				&--bg-dark-blue {
+					color: $white;
+					background: $blue-ribbon;
+				}
+			}
+
+			&__price-tag {
+				margin-bottom: 2rem;
+				font-family: $poppins-font;
+				font-size: 3.6rem;
+				font-weight: 600;
+				color: $blue-ribbon;
+
+				sup {
+					font-size: 2rem;
+					top: -15px;
+					left: -3px;
+				}
+
+				span {
+					font-size: 1.6rem;
+					font-weight: 300;
+					color: $silver;
+				}
+			}
+
+			&__price-item {
+				&--disabled {
+					color: $silver;
+					text-decoration: line-through;
+				}
+			}
+
+			&__price-label {
+				position: absolute;
+				top: 21px;
+				right: -61px;
+				padding: 0.1rem 0 0.3rem;
+				width: 200px;
+				font-size: 1.4rem;
+				font-weight: 400;
+				color: $white;
+				background: $blue-ribbon;
+				z-index: 1;
+				transform: rotate(45deg);
 			}
 		}
 	}
